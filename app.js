@@ -4,10 +4,10 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 var connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "gluaymunchkin",
+    host: "sql6.freesqldatabase.com",
+    user: "sql6586687",
+    password: "Q3c5c2gCYv",
+    database: "sql6586687",
 });
   
 connection.connect((error) => {
@@ -52,6 +52,7 @@ app.post("/raffle", function (request, response){
     })
 })
 
-app.listen(3000, function(){
-    console.log("Listening at Port 3000");
+const port = process.env.PORT || 3000;
+app.listen(port, function(){
+    console.log("Listening at Port " + port);
   });
