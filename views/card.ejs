@@ -1,0 +1,53 @@
+<html lang="th">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="card.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mali:ital@1&family=Playfair+Display&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <a href='/'>กิจกรรม</a>
+            <a class="active" href='/card'> สคส</a>
+        </nav>
+        <div class="container">
+            <div class="imgbox">
+                <div id="card">
+                    <img src="./img/banana.png">
+                </div>
+            </div>
+            <button onclick="document.getElementById('card').innerHTML = getRndInteger(1,5)">สุ่ม ส.ค.ส. กล้วย</button>
+        </div>
+        <div class="decoration">
+            <img id="img1" src="./img/banana.png">
+            <img id="img2" src="./img/banana.png">
+            <img id="img3" src="./img/banana.png">
+            <img id="img4" src="./img/banana.png">
+            <img id="img5" src="./img/banana.png">
+            <img id="img6" src="./img/banana.png">
+        </div>
+        <script>
+            var limit = 0;
+            function getRndInteger(min, max) {
+                console.log(limit)
+                if (limit == 0){
+                    imgnum = Math.floor(Math.random() * (max - min)) + min;
+                    limit = imgnum;
+                }
+                if(imgnum == 1) {
+                    return '<img src="./img/newyearcard_1.jpg">'
+                }else if(imgnum == 2){
+                    return '<img src="./img/newyearcard_2.jpg">'
+                }else if(imgnum == 3){
+                    return '<img src="./img/newyearcard_3.jpg">'
+                }else if(imgnum == 4){
+                    return '<img src="./img/gluay.png">'
+                }else{
+                    return '<img src="./img/gluay.png">'
+                }
+            }
+        </script>
+    </body>
+</html>
