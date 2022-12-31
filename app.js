@@ -46,6 +46,13 @@ app.get("/friendship_form", function (request, response) {
 app.get("/friendship_submitted", function (request, response) {
     response.render("friendship_done");
 });
+app.get("/admin", function (request, response) {
+    connection.query('SELECT * FROM friendship',function (error, results){
+        if(error) throw error;
+        response.render("admin",{ friendships: results});
+    })
+});
+
 app.post("/raffle", function (request, response){
     let igname = request.body.igname;
     console.log(request.body)
