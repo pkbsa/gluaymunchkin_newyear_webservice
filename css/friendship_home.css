@@ -1,0 +1,99 @@
+*{
+    font-family: 'Mali', cursive;
+    font-weight: 400;
+    font-style: italic;
+}
+body{
+    background-color: #ffca60;
+    font-family: 'Mali', cursive;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2;
+    padding: 2em;
+    text-align: center;
+}
+.imgbox{
+    max-width: 60vh;
+}
+.container img{
+    max-width: 100%;
+}
+.container p{
+    width: 100%;
+    color: rgb(104, 102, 102);
+}
+.container a{
+    text-decoration: none;
+    color: black;
+}
+#thank{
+    font-size: 0.72em;
+}
+nav{    
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin: 2rem;
+    position: relative;
+    z-index: 2;
+    color: rgba(61, 60, 60, 0.905);
+}
+nav a{
+    text-decoration: none;
+    color: rgb(75, 74, 74);
+}
+nav .active{
+    color: black;
+}
+.Button {
+    display: flex;
+    justify-content: end;
+}
+
+.decoration img{
+    float: left;
+    position: absolute;
+    left: -10%;
+    top: 0px;
+    z-index: 1;
+    max-height: 12em;
+    overflow: hidden;
+    transform: rotate(180deg);
+}
+#img2{
+    left: 15%;
+    top: 70%;
+    max-height: 9em;
+    transform: rotate(90deg);
+}
+#img3{
+    left: 65%;
+    top: 15%;
+    max-height: 5em;
+    transform: rotate(290deg);
+}
+#img4{
+    left: 60%;
+    top: -10%;
+    max-height: 10em;
+    transform: rotate(90deg);
+}
+#img5{
+    left: 55%;
+    top: 57%;
+    max-height: 8em;
+    transform: rotate(270deg);
+}
+#img6{
+    left: 10%;
+    top: 40%;
+    max-height: 5em;
+    transform: rotate(0deg);
+}
+

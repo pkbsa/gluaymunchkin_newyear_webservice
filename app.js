@@ -37,6 +37,15 @@ app.get("/raffle-entered", function (request, response) {
 app.get("/raffle-failed", function (request, response) {
     response.render("submit-failed");
 });
+app.get("/friendship", function (request, response) {
+    response.render("friendship_home");
+});
+app.get("/friendship_form", function (request, response) {
+    response.render("friendship");
+});
+app.get("/friendship_submitted", function (request, response) {
+    response.render("friendship_done");
+});
 app.post("/raffle", function (request, response){
     let igname = request.body.igname;
     console.log(request.body)
@@ -49,6 +58,19 @@ app.post("/raffle", function (request, response){
         }else{
             response.redirect('/raffle-failed');
         }
+    })
+})
+app.post("/friendship_form", function (request, response){
+    let sender = request.body.sender;
+    let message = request.body.message;
+    console.log(request.body);
+    connection.query("INSERT INTO friendship SET ?",
+    {
+        sender_name: sender,
+        message: message,
+    }
+    ,(error, results) => {
+        response.redirect('/friendship_submitted');
     })
 })
 

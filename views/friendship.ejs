@@ -1,22 +1,30 @@
 <html lang="th">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="submit.css">
+        <link rel="stylesheet" href="friendship.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Mali:ital@1&family=Playfair+Display&display=swap" rel="stylesheet">
     </head>
     <body>
         <nav>
             <a href='/'>กิจกรรม</a>
             <a href='/card'> สคส</a>
-            <a href="/friendship">เฟรนชิพ</a>
+            <a class="active" href='/friendship'>เฟรนชิพ</a>
         </nav>
         <div class="container">
-            <h2>IG นี้ถูกใช้ลงทะเบียนไปแล้วว</h2></br>
-            <h3>ขอบคุณที่มาเข้าร่วมกิจกรรมของน้องกล้วยนะงับ แต่ได้แค่คนละ 1 โควตาเท่านั้นน้าา</h3>
-            <button onclick="window.location='./'">กลับหน้ากิจกรรม</button>
+            <div class="ImgBox">
+                <form action="/friendship_form" method="POST" enctype="application/x-www-form-urlencoded">
+                    <div class="form">
+                        <h3 id="to">ถึง น้องกล้วย</h3>
+                        <textarea type="text" id="message" placeholder="เขียนข้อความถึงน้องกล้วย" name='message' required></textarea></br>
+                        <div id="from">
+                            <label>จาก</label><input type="text" placeholder="...." name='sender' required>
+                        </div>
+                    </div>
+                    <button type="submit">ส่งให้น้องกล้วยอ่าน</button>
+                </form>
+            </div>
         </div>
         <div class="decoration">
             <img id="img1" src="./img/banana.png">
