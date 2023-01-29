@@ -27,3 +27,11 @@ or
 ```
 node app.js
 ```
+
+Images of the Website (It was designed to be used in Instagram browser)
+
+or
+
+https://pkbsa.github.io/gluaymunchkin_newyearraffle/index.html
+
+<img src='./img/index.jpg' alt="index" width="22%"> <img src='./img/random.jpg' alt="random" width="22%"> <img src='./img/friendship.jpg' alt="friendship" width="22%"> <img src='./img/card.jpg' alt="card" width="22%">
